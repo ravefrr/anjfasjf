@@ -31,6 +31,7 @@ Mouse.KeyDown:Connect(function(KeyPressed)
                 game.StarterGui:SetCore("SendNotification", {
                     Title = "TWR",
                     Text = "Lock off "
+                    Duration: 3s
                 })
             end
         else
@@ -40,6 +41,7 @@ Mouse.KeyDown:Connect(function(KeyPressed)
                 game.StarterGui:SetCore("SendNotification", {
                     Title = "TWR",
                     Text = "Locked on " .. tostring(Plr.Character.Humanoid.DisplayName)
+                    Duration: 3s
                 })
             end
         end
