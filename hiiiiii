@@ -10,7 +10,7 @@ local new = {
     Tracer = { 
         TracerThickness = 3.5, 
         TracerTransparency = 1, 
-        TracerColor = Color3.fromRGB(153, 50, 204) 
+        TracerColor = Color3.fromRGB(71, 3, 3) 
     }
 }
 
@@ -30,7 +30,7 @@ Mouse.KeyDown:Connect(function(KeyPressed)
                 Plr = FindClosestUser()
                 game.StarterGui:SetCore("SendNotification", {
                     Title = "TWR",
-                    Text = "Locked off" .. tostring(Plr.Character.Humanoid.DisplayName)
+                    Text = "Lock off "
                 })
             end
         else
@@ -39,7 +39,7 @@ Mouse.KeyDown:Connect(function(KeyPressed)
             if new.main.Notifications == true then
                 game.StarterGui:SetCore("SendNotification", {
                     Title = "TWR",
-                    Text = "Locked on" .. tostring(Plr.Character.Humanoid.DisplayName)
+                    Text = "Locked on " .. tostring(Plr.Character.Humanoid.DisplayName)
                 })
             end
         end
