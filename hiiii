@@ -8,9 +8,9 @@ local new = {
         AirshotFunc = true
     },
     Tracer = { 
-        TracerThickness = 3.5, -- made by thusky
-        TracerTransparency = 1, -- made by thusky
-        TracerColor = Color3.fromRGB(153, 50, 204) -- made by thusky
+        TracerThickness = 3.5, 
+        TracerTransparency = 1, 
+        TracerColor = Color3.fromRGB(153, 50, 204) 
     }
 }
 
@@ -29,8 +29,8 @@ Mouse.KeyDown:Connect(function(KeyPressed)
             if new.main.Notifications == true then
                 Plr = FindClosestUser()
                 game.StarterGui:SetCore("SendNotification", {
-                    Title = "<3",
-                    Text = "No longer locked on"
+                    Title = "TWR",
+                    Text = "Locked off" .. tostring(Plr.Character.Humanoid.DisplayName)
                 })
             end
         else
@@ -38,8 +38,8 @@ Mouse.KeyDown:Connect(function(KeyPressed)
             new.main.Mario = true
             if new.main.Notifications == true then
                 game.StarterGui:SetCore("SendNotification", {
-                    Title = "<3",
-                    Text = "Locked on to:" .. tostring(Plr.Character.Humanoid.DisplayName)
+                    Title = "TWR",
+                    Text = "Locked on" .. tostring(Plr.Character.Humanoid.DisplayName)
                 })
             end
         end
@@ -72,7 +72,7 @@ RunService.Stepped:connect(function()
         local Vector = CurrentCamera:WorldToViewportPoint(Plr.Character[new.main.Part].Position +
                                                               (Plr.Character.HumanoidRootPart.Velocity *
                                                                   new.main.Prediction))
-        Line.Color = new.Tracer.TracerColor                                                                          -- made by thusky
+        Line.Color = new.Tracer.TracerColor                                                                         
         Line.Thickness = new.Tracer.TracerThickness
         Line.Transparency = new.Tracer.TracerTransparency
  
